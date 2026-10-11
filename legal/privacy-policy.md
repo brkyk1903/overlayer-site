@@ -1,6 +1,6 @@
 ---
 title: Overlayer privacy policy
-description: How Overlayer handles your data: everything stays on your phone, with no accounts, ads or tracking.
+description: "How Overlayer handles your data. Everything stays on your phone, with no accounts, ads or tracking."
 ---
 
 # Privacy policy
