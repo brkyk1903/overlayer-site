@@ -1,0 +1,15 @@
+# GitHub Pages builds this folder with Jekyll. index.html is served as is;
+# the legal pages are rendered from the same markdown files the app bundles,
+# so the website and in-app copies can never differ.
+
+title: Overlayer
+
+# Internal notes, not for the public site.
+exclude:
+  - release
+
+defaults:
+  - scope:
+      path: "legal"
+    values:
+      layout: legal

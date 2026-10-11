@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}">
+<meta name="theme-color" content="#0b1320">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:url" content="https://brkyk1903.github.io/overlayer-site/{{ page.url | remove_first: '/' }}">
+<meta property="og:image" content="https://brkyk1903.github.io/overlayer-site/store/feature-graphic-1024x500.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://brkyk1903.github.io/overlayer-site/{{ page.url | remove_first: '/' }}">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../store/icon-512.png">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html" aria-label="Overlayer home">
+      <svg viewBox="24 24 60 60" aria-hidden="true"><path d="M29,36V29H36M72,29H79V36M79,72V79H72M36,79H29V72" fill="none" stroke="#5A6B82" stroke-width="2.5" stroke-linecap="round"/><path d="M40.56,67.44A19,19 0 1,1 67.44,67.44" fill="none" stroke="#2A3A52" stroke-width="6" stroke-linecap="round"/><path d="M40.56,67.44A19,19 0 1,1 72.1,49.1" fill="none" stroke="#5EC8F0" stroke-width="6" stroke-linecap="round"/><path d="M53.14,51.65L69.97,48.19L54.86,56.35L49.3,55.71Z" fill="#fff"/><circle cx="54" cy="54" r="4" fill="#fff"/></svg>
+      Overlayer
+    </a>
+    <nav aria-label="Legal">
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms-of-use.html">Terms</a>
+      <a href="accessibility.html">Accessibility</a>
+    </nav>
+  </div>
+</header>
+
+<main class="legal">
+  <div class="wrap">
+    <a class="back" href="../index.html">← BACK TO OVERLAYER</a>
+    <article>
+{{ content }}
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Berkay Karamanlargil. This site sets no cookies and loads nothing from third parties.</p>
+  </div>
+</footer>
+
+</body>
+</html>

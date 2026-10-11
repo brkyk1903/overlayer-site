@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Overlayer: GPS data overlays for action-camera and drone videos</title>
+<meta name="description" content="Burn speed, altitude, heart rate and G-force into your action-camera and drone videos. Works offline. Coming soon to Android and iPhone.">
+<meta name="theme-color" content="#0b1320">
+<meta property="og:title" content="Overlayer: GPS video overlays">
+<meta property="og:description" content="Your ride had the numbers. Now your video does too.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://brkyk1903.github.io/overlayer-site/">
+<meta property="og:image" content="https://brkyk1903.github.io/overlayer-site/store/feature-graphic-1024x500.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="Overlayer: speed, altitude and heart-rate gauges over a ride video">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://brkyk1903.github.io/overlayer-site/">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="store/icon-512.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="store/icon-512.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Overlayer home">
+      <svg viewBox="24 24 60 60" aria-hidden="true"><path d="M29,36V29H36M72,29H79V36M79,72V79H72M36,79H29V72" fill="none" stroke="#5A6B82" stroke-width="2.5" stroke-linecap="round"/><path d="M40.56,67.44A19,19 0 1,1 67.44,67.44" fill="none" stroke="#2A3A52" stroke-width="6" stroke-linecap="round"/><path d="M40.56,67.44A19,19 0 1,1 72.1,49.1" fill="none" stroke="#5EC8F0" stroke-width="6" stroke-linecap="round"/><path d="M53.14,51.65L69.97,48.19L54.86,56.35L49.3,55.71Z" fill="#fff"/><circle cx="54" cy="54" r="4" fill="#fff"/></svg>
+      Overlayer
+    </a>
+    <nav aria-label="Main">
+      <a href="#data">Your data</a>
+      <a href="#features">Features</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#pricing">Pricing</a>
+      <a class="pill" href="#notify">Get notified</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero: the product is the demo -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-head">
+        <h1>Your ride had the numbers. <em>Now your video does too.</em></h1>
+        <div class="hero-side">
+          <p class="lede">Overlayer burns your real ride data into your videos, right on your phone: 15 live readouts, from speed and altitude to heart rate, power, cadence and G-force. Footage from any camera, drone or phone works. No computer and no account, and nothing is uploaded.</p>
+          <div class="stores">
+            <a class="store" href="#notify">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18.5h4"/></svg>
+              <span><small>Coming soon</small><b>Android</b></span>
+            </a>
+            <a class="store" href="#notify">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 5h3"/></svg>
+              <span><small>Coming soon</small><b>iPhone</b></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo">
+        <div class="viewfinder">
+          <div class="frame" id="frame" data-style="broadcast" role="img" aria-label="Animated example of a downhill mountain-bike video with a live data overlay showing speed, altitude, heart rate and gradient">
+            <canvas id="scene"></canvas>
+          </div>
+        </div>
+
+        <div class="demo-bar">
+          <div class="tabs" role="tablist" aria-label="Overlay style">
+            <button role="tab" data-style="clean" aria-selected="false" id="tab-clean">Clean</button>
+            <button role="tab" data-style="race" aria-selected="false" id="tab-race">Race Dash</button>
+            <button role="tab" data-style="broadcast" aria-selected="true" id="tab-broadcast">Broadcast</button>
+          </div>
+          <div class="swatches" id="swatches" role="radiogroup" aria-label="Colourway"></div>
+        </div>
+
+        <div class="more-looks">
+          <p class="more-lead"><b>That's just a taste.</b> Every style comes in 4 colourways, and in Custom mode you build your own layout from 12 gauge types.</p>
+          <div class="more-row">
+            <span class="more-label">More styles coming</span>
+            <ul class="chips" aria-label="Styles on the way">
+              <li>HUD</li><li>Analog</li><li>Neon</li><li>Widgets</li><li>Alpine</li><li>LCD</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Files -->
+  <section class="band" id="data">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Supported files</p>
+        <h2>Film on anything. Add your data.</h2>
+        <p class="lede">Video in MP4 or MOV from any camera: DJI Osmo Action 5 Pro, Action 4, Insta360, GoPro, a drone or your phone. Pair it with one of these data files.</p>
+      </div>
+      <div class="sources">
+        <div class="source">
+          <span class="ext">.GPX</span>
+          <h3>Any sports app</h3>
+          <p>Export from Strava, Komoot, Garmin Connect or almost any tracking app or watch.</p>
+          <ul><li>ROUTE</li><li>ELEVATION</li><li>TIME</li><li>HEART RATE</li></ul>
+        </div>
+        <div class="source">
+          <span class="ext">.FIT</span>
+          <h3>Watches &amp; bike computers</h3>
+          <p>Straight from Garmin, Wahoo, Coros and Zwift, with everything your sensors recorded.</p>
+          <ul><li>HEART RATE</li><li>POWER</li><li>CADENCE</li><li>TEMP</li></ul>
+        </div>
+        <div class="source">
+          <span class="ext">.SRT</span>
+          <h3>DJI drones</h3>
+          <p>The flight log your drone saves next to each video, already timed to the footage.</p>
+          <ul><li>HEIGHT</li><li>SPEED</li><li>POSITION</li></ul>
+        </div>
+        <div class="source">
+          <span class="ext">.MP4</span>
+          <h3>Cameras with built-in GPS</h3>
+          <p>GoPro clips carry their own GPS and motion data, so no extra file is needed. Split recordings are joined back together.</p>
+          <ul><li>GPS</li><li>G-FORCE</li><li>JUMPS</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">What goes on your video</p>
+        <h2>12 looks. 12 gauges. 15 readouts.</h2>
+        <p class="lede">Choose from 3 complete styles in 4 colourways each, or build your own from 12 gauge types: dials, big numbers, bars, route map, altitude chart, compass, heart-rate zones and more.</p>
+      </div>
+      <div class="readouts" aria-label="Every readout Overlayer can show">
+        <div class="readout"><i>Speed</i><b>47<small>km/h</small></b></div>
+        <div class="readout"><i>Pace</i><b>4:52<small>/km</small></b></div>
+        <div class="readout"><i>Altitude</i><b>1 812<small>m</small></b></div>
+        <div class="readout"><i>Grade</i><b>−12<small>%</small></b></div>
+        <div class="readout"><i>Climb rate</i><b>640<small>m/h</small></b></div>
+        <div class="readout"><i>Vertical</i><b>1 240<small>m</small></b></div>
+        <div class="readout"><i>Distance</i><b>12.6<small>km</small></b></div>
+        <div class="readout"><i>Heart rate</i><b>164<small>bpm</small></b></div>
+        <div class="readout"><i>Power</i><b>312<small>W</small></b></div>
+        <div class="readout"><i>Cadence</i><b>88<small>rpm</small></b></div>
+        <div class="readout"><i>Temperature</i><b>9<small>°C</small></b></div>
+        <div class="readout"><i>Heading</i><b>NE<small>42°</small></b></div>
+        <div class="readout"><i>G-force</i><b>1.8<small>g</small></b></div>
+        <div class="readout"><i>Time of day</i><b>16:42</b></div>
+        <div class="readout"><i>Elapsed</i><b>1:14:32</b></div>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <p class="spec">3840 × 2160 · 60 FPS</p>
+          <h3>Quality that matches your camera</h3>
+          <p>Exports at your video's own resolution and frame rate, so 4K60 stays 4K60. HEVC or H.264, up to a "keep everything" quality setting.</p>
+        </div>
+        <div class="feature">
+          <p class="spec">9 : 16</p>
+          <h3>Made for Reels, TikTok and Shorts</h3>
+          <p>Reframe to vertical or square and the overlay re-lays itself out to fit. Share straight to your apps when it's done.</p>
+        </div>
+        <div class="feature">
+          <p class="spec">AIRTIME · HEIGHT · SPIN</p>
+          <h3>Jump detection</h3>
+          <p>A camera's motion sensors know when you left the ground. Overlayer finds each jump and shows it as it happens. Works with GoPro clips today.</p>
+        </div>
+        <div class="feature">
+          <p class="spec">MAP · PROFILE · COMPASS</p>
+          <h3>Where you are on the route</h3>
+          <p>A route map, altitude profile and compass move with you, so viewers can see where you are on the route.</p>
+        </div>
+        <div class="feature">
+          <p class="spec">MAX · AVG · TOTAL</p>
+          <h3>A finish card</h3>
+          <p>End the video on a summary of your best numbers: top speed, total climb, distance and average heart rate.</p>
+        </div>
+        <div class="feature">
+          <p class="spec">EXPORTS IN THE BACKGROUND</p>
+          <h3>Keep using your phone</h3>
+          <p>Long exports keep going while you do other things. A notification tells you when your video is ready.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How it works</p>
+        <h2>Three taps from ride to post</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>Add your data</h3><p>Pick a GPX, FIT or SRT file from your phone, or a video with built-in GPS.</p></div>
+        <div class="step"><h3>Pick your video</h3><p>Overlayer lines the data up with your footage using the recording time.</p></div>
+        <div class="step"><h3>Choose a style and export</h3><p>Preview it live, pick a style and colourway, then export and share.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section id="privacy">
+    <div class="wrap privacy">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Private by design</p>
+        <p class="big">Your rides stay <em>on your phone.</em></p>
+        <p class="lede">Overlayer has no internet permission, so it can't send anything anywhere. Your location history, heart rate and videos never leave your phone. There are no accounts, ads, analytics or tracking.</p>
+        <p><a href="legal/privacy-policy.html">Read the privacy policy</a></p>
+      </div>
+      <div class="perm">
+        <header>WHAT THE APP CAN ACCESS</header>
+        <ul>
+          <li class="no"><span>NEVER</span>The internet</li>
+          <li class="no"><span>NEVER</span>Your location</li>
+          <li class="no"><span>NEVER</span>Camera, microphone or contacts</li>
+          <li class="yes"><span>ASKS</span>Notifications, for export progress</li>
+          <li class="yes"><span>YOURS</span>Only the files and videos you pick</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="band" id="pricing">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Pricing</p>
+        <h2>Free to try. Pro when you're hooked.</h2>
+        <p class="lede">The free version works fully, so you can make a video you like before paying anything.</p>
+      </div>
+
+      <div class="tabs billing" role="tablist" aria-label="Pro billing">
+        <button role="tab" data-bill="year" aria-selected="true" id="bill-year">Yearly</button>
+        <button role="tab" data-bill="month" aria-selected="false" id="bill-month">Monthly</button>
+        <button role="tab" data-bill="life" aria-selected="false" id="bill-life">Lifetime</button>
+      </div>
+
+      <div class="plans">
+        <div class="plan">
+          <h3>Free</h3>
+          <div class="price"><b>$0</b><span>forever</span></div>
+          <ul>
+            <li>Your first 3 exports in full Pro quality</li>
+            <li>Every file type: GPX, FIT, SRT and built-in camera GPS</li>
+            <li>Automatic sync to your video</li>
+            <li>The Clean style, or one gauge of your choice</li>
+            <li class="limit">After that, exports up to 720p, 30 fps</li>
+            <li class="limit">Small Overlayer watermark</li>
+          </ul>
+        </div>
+        <div class="plan pro">
+          <h3>Pro <span class="tag">BEST</span></h3>
+          <div class="price"><b id="proPrice">$9</b><span id="proPer">per year</span></div>
+          <ul>
+            <li>Everything in Free</li>
+            <li>Full quality: 4K and up to 120 fps</li>
+            <li>No watermark</li>
+            <li>Every style, colourway and gauge</li>
+            <li>Vertical and square export for social</li>
+            <li>Automatic run detection and saved presets</li>
+          </ul>
+        </div>
+      </div>
+      <p class="fine">Launch prices in USD; your local price is shown in the store before you buy. Subscriptions renew automatically and can be cancelled at any time in your store account. You keep Pro until the end of the period you paid for.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Questions</p>
+        <h2>Good to know</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Which cameras work?</summary>
+          <p>Any camera that records MP4 or MOV, including DJI Osmo Action 5 Pro and Action 4, Insta360, GoPro and your phone. Pair the video with a GPX or FIT file from your watch, bike computer or sports app. DJI drones and GoPro clips carry their own data, so they need no extra file.</p>
+        </details>
+        <details>
+          <summary>How do I use my Strava activity?</summary>
+          <p>On the Strava website, open the activity, choose the ⋯ menu and Export GPX. Open that file in Overlayer and pick your video.</p>
+        </details>
+        <details>
+          <summary>When is it coming out?</summary>
+          <p>Android is first and is in testing now. The iPhone version is in development. Leave your email below to hear the day each one launches, or to join the Android beta.</p>
+        </details>
+        <details>
+          <summary>Which phones does it run on?</summary>
+          <p>Android 8.0 or newer. Exporting in 4K needs a phone that can record 4K itself; most phones from the last few years can.</p>
+        </details>
+        <details>
+          <summary>Does it need an internet connection?</summary>
+          <p>Never. Everything happens on your phone, so it works on a mountain with no signal just as well as at home.</p>
+        </details>
+        <details>
+          <summary>Are the numbers accurate?</summary>
+          <p>They're exactly what your devices recorded, lightly smoothed to look good on video. GPS and sensors aren't perfect, so treat the overlay as a great-looking record, not an official timing or medical tool.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notify -->
+  <section class="band" id="notify">
+    <div class="wrap notify">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Be first</p>
+        <h2>Want it on your phone first?</h2>
+        <p class="lede">Android beta testers get Pro free while it's in testing. Send an email and say whether you use Android or iPhone.</p>
+      </div>
+      <div class="mail">
+        <div class="addr"><code id="email">coverski1903@gmail.com</code><button class="btn ghost" type="button" id="copy">Copy</button></div>
+        <a class="btn" id="mailto" href="mailto:coverski1903@gmail.com?subject=Overlayer%20early%20access">Email to join</a>
+        <p>Just your email, used only to tell you about Overlayer. No mailing-list service, no tracking.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <a class="brand" href="#top" aria-label="Overlayer home">
+        <svg viewBox="24 24 60 60" aria-hidden="true"><path d="M29,36V29H36M72,29H79V36M79,72V79H72M36,79H29V72" fill="none" stroke="#5A6B82" stroke-width="2.5" stroke-linecap="round"/><path d="M40.56,67.44A19,19 0 1,1 67.44,67.44" fill="none" stroke="#2A3A52" stroke-width="6" stroke-linecap="round"/><path d="M40.56,67.44A19,19 0 1,1 72.1,49.1" fill="none" stroke="#5EC8F0" stroke-width="6" stroke-linecap="round"/><path d="M53.14,51.65L69.97,48.19L54.86,56.35L49.3,55.71Z" fill="#fff"/><circle cx="54" cy="54" r="4" fill="#fff"/></svg>
+        Overlayer
+      </a>
+      <nav aria-label="Footer">
+        <a href="legal/privacy-policy.html">Privacy policy</a>
+        <a href="legal/terms-of-use.html">Terms of use</a>
+        <a href="legal/accessibility.html">Accessibility</a>
+        <a href="#notify">Contact</a>
+      </nav>
+    </div>
+    <p>© 2026 Berkay Karamanlargil. This site sets no cookies and loads nothing from third parties.</p>
+    <p class="tm">DJI, GoPro, Insta360, Garmin, Wahoo, Coros, Zwift, Strava, Komoot, Instagram and TikTok are trademarks of their respective owners. Overlayer is not affiliated with or endorsed by them. Android is a trademark of Google LLC. iPhone is a trademark of Apple Inc.</p>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
