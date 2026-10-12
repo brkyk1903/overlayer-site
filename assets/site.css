@@ -128,6 +128,10 @@ h3 { font-weight: 700; font-size: 1.2rem; text-transform: uppercase; letter-spac
 .c-editor img, .c-export img { border-radius: 12px; border: 1px solid var(--line); width: 100%; object-fit: cover; object-position: top; }
 /* Ends just above the shape buttons, so nothing shows half cut. */
 .c-editor img { aspect-ratio: 1080 / 870; }
+/* Fills the rest of the tall card: three boxes share the height evenly. */
+.tabs-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; flex: 1; grid-auto-rows: 1fr; }
+.tabs-list li { color: var(--muted); font-size: 0.92rem; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; display: flex; flex-direction: column; justify-content: center; }
+.tabs-list b { display: block; color: #fff; font: 600 1rem/1.2 var(--display); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 2px; }
 .c-gauges, .c-export { grid-column: span 2; }
 /* The sheet itself, cropped to its shapes and quality, shown wide enough to read. */
 .c-export img { aspect-ratio: 1080 / 900; object-position: top; }
