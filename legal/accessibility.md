@@ -16,17 +16,15 @@ We aim to meet the [Web Content Accessibility Guidelines (WCAG) 2.2](https://www
 ## What we've done
 
 - Every page works with a keyboard alone, and focused items show a clear outline.
-- Images and the animated overlay demo have text descriptions for screen readers. Purely decorative graphics are hidden from them.
+- Every image has a text description for screen readers, including what the overlay in each screenshot shows. Purely decorative graphics are hidden from them.
 - Pages use real headings, landmarks and labelled navigation, so they're easy to move around with a screen reader.
 - Text and controls are designed to have strong contrast against the dark background.
 - Pages reflow to fit phones and can be zoomed to 200% without losing content.
-- If your device asks for reduced motion, the overlay demo shows a still frame and the site stops smooth scrolling.
-- The animated overlay demo has a pause button, so it never has to keep moving.
+- Nothing on the site moves on its own. If your device asks for reduced motion, the site also stops smooth scrolling.
 - The sign-up form has visible labels, says clearly what went wrong if an email address isn't valid, and announces when you've signed up.
 
 ## Known limitations
 
-- The overlay demo on the home page is a visual preview. Its description explains what it shows, but the individual gauge values aren't read out as they change.
 - The overlays Overlayer burns into your videos are part of the picture, so they can't be read by a screen reader in the finished video.
 
 ## Tell us about a barrier
