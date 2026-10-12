@@ -23,6 +23,16 @@
     });
   });
 
+  // The closing "Get early access" button jumps back up to the form.
+  var ctaTop = document.getElementById("cta-top");
+  if (ctaTop) ctaTop.addEventListener("click", function (e) {
+    var field = document.getElementById("su-email");
+    if (!field) return;
+    e.preventDefault();
+    field.focus({ preventScroll: true });
+    field.scrollIntoView({ block: "center", behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  });
+
   // ---------- Sign-up form ----------
 
   // Sends the email to FormSubmit, which forwards it to us. Nothing is sent
