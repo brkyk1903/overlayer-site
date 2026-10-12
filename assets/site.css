@@ -61,7 +61,7 @@ h3 { font-weight: 700; font-size: 1.2rem; text-transform: uppercase; letter-spac
 .nav { position: sticky; top: 0; z-index: 50; background: rgba(7,11,18,.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 60px; flex-wrap: wrap; }
 .brand { display: inline-flex; align-items: center; gap: 8px; font: 800 1.3rem/1 var(--display); color: #fff; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; }
-.brand svg { width: 26px; height: 26px; }
+.brand svg { width: 32px; height: 32px; }
 .brand:hover { color: #fff; }
 .nav nav { display: flex; align-items: center; gap: 4px 22px; flex-wrap: wrap; font-size: 0.95rem; font-weight: 500; }
 .nav nav a { color: var(--text); text-decoration: none; }
@@ -128,9 +128,8 @@ h3 { font-weight: 700; font-size: 1.2rem; text-transform: uppercase; letter-spac
 .c-editor img, .c-export img { border-radius: 12px; border: 1px solid var(--line); width: 100%; object-fit: cover; object-position: top; }
 .c-editor img { aspect-ratio: 4 / 3.4; }
 .c-gauges, .c-export { grid-column: span 2; }
-.c-export { flex-direction: row; align-items: center; }
-.c-export .txt { flex: 1; }
-.c-export img { width: 40%; aspect-ratio: 1 / 1; object-position: bottom; }
+/* The sheet itself, cropped to its shapes and quality, shown wide enough to read. */
+.c-export img { aspect-ratio: 1080 / 900; object-position: top; }
 .c-data { grid-column: span 4; }
 .c-privacy { grid-column: span 4; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
 .c-privacy .txt { flex: 1 1 280px; }
