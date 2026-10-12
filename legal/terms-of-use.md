@@ -5,9 +5,9 @@ description: The terms for using the Overlayer app and website.
 
 # Terms of use
 
-Effective 11 October 2026
+Effective 12 October 2026
 
-These terms apply to the Overlayer app for Android, made by Berkay Karamanlargil ("we"). By using the app you agree to them.
+These terms apply to the Overlayer app for Android and the Overlayer website, made by Berkay Karamanlargil ("we"). By using the app or the website you agree to them.
 
 ## Using the app
 
@@ -42,6 +42,12 @@ A one-time ("lifetime") purchase unlocks the paid features for as long as the ap
 ## Free Pro exports and pass codes
 
 Your first 3 exports are in full Pro quality at no cost; after that, the free version's limits apply. We may also give pass codes that unlock Pro for a set time or permanently. Pass codes are free gifts: they are personal, have no cash value, can't be sold or exchanged for money, and a code that has been shared publicly or sold may stop working in later versions of the app.
+
+## Test versions and early access
+
+Test (beta) versions are unfinished and may have bugs, lose settings or stop working; keep the original of any video you use with them. Beta testers get Pro free while they're testing. That access ends when the tester version expires or the app launches, unless we tell you otherwise.
+
+Joining the early-access list on the website doesn't guarantee a place in a test or any price. The features, prices and launch dates on the website describe our plans and may change before the app is released; what you're offered in the store when you buy is what applies.
 
 ## The software is provided as is
 

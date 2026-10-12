@@ -131,18 +131,15 @@ h3 { font-weight: 700; font-size: 1.2rem; text-transform: uppercase; letter-spac
 .c-export { flex-direction: row; align-items: center; }
 .c-export .txt { flex: 1; }
 .c-export img { width: 40%; aspect-ratio: 1 / 1; object-position: bottom; }
-.c-data, .c-dji { grid-column: span 2; }
+.c-data { grid-column: span 4; }
 .c-privacy { grid-column: span 4; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
 .c-privacy .txt { flex: 1 1 280px; }
 .c-privacy .perm { flex: 2 1 420px; }
 .dials { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
 .dials img { width: 100%; aspect-ratio: 1; clip-path: circle(42.5% at 50% 50%); }
-.chips { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.chips { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
 .chips li { background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; font-size: 0.85rem; color: var(--muted); display: grid; gap: 2px; }
 .chips b { font: 0.95rem/1 var(--mono); color: var(--sky); }
-.steps { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
-.steps li { counter-increment: s; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; font-size: 0.85rem; color: var(--muted); }
-.steps li::before { content: counter(s, decimal-leading-zero); display: block; font: 800 1rem/1 var(--display); color: var(--sky); margin-bottom: 3px; }
 .card .note { font-size: 0.8rem; }
 .perm { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 .perm li { background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font-size: 0.88rem; }
@@ -152,8 +149,9 @@ h3 { font-weight: 700; font-size: 1.2rem; text-transform: uppercase; letter-spac
 .more { font-size: 0.88rem; }
 @media (max-width: 860px) {
   .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .c-editor, .c-gauges, .c-export, .c-data, .c-dji, .c-privacy { grid-column: span 2; grid-row: auto; }
+  .c-editor, .c-gauges, .c-export, .c-data, .c-privacy { grid-column: span 2; grid-row: auto; }
 }
+@media (max-width: 860px) { .chips { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .perm { grid-template-columns: 1fr; } }
 
 /* ---------- Pricing ---------- */
