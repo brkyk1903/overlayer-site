@@ -161,8 +161,8 @@ p { margin: 0; }
   font: 600 1.05rem/1 var(--display); letter-spacing: 0.04em; text-transform: uppercase;
   padding: 9px 16px; border-radius: 999px;
 }
-.tabs button[aria-selected="true"] { background: var(--sky); color: var(--ink); }
-.tabs button:not([aria-selected="true"]):hover { color: var(--text); }
+.tabs button[aria-pressed="true"] { background: var(--sky); color: var(--ink); }
+.tabs button:not([aria-pressed="true"]):hover { color: var(--text); }
 /* Under the demo: the three styles shown are not the whole range. */
 .more-looks { display: grid; gap: 12px; margin-top: 22px; padding: 18px 20px; border: 1px dashed var(--steel); border-radius: 14px; }
 .more-lead { color: var(--muted); }
@@ -180,7 +180,7 @@ p { margin: 0; }
   padding: 5px 12px 5px 6px; font: 0.85rem/1 var(--body);
 }
 .swatches button:hover { color: var(--text); border-color: var(--steel); }
-.swatches button[aria-checked="true"] { color: var(--text); border-color: var(--sky); }
+.swatches button[aria-pressed="true"] { color: var(--text); border-color: var(--sky); }
 .swatches i { width: 20px; height: 20px; border-radius: 50%; flex: none; box-shadow: inset 0 0 0 1px rgba(255,255,255,.25); }
 
 /* ---------- Sections ---------- */
@@ -300,3 +300,48 @@ footer .tm { max-width: 80ch; font-size: 0.8rem; }
 .legal p + p { margin-top: 14px; }
 .legal ul { padding-left: 22px; display: grid; gap: 8px; margin: 12px 0; }
 .legal strong { color: var(--text); }
+
+/* Pause control for the demo (WCAG 2.2.2: moving content can be stopped) */
+.pause { margin-left: auto; font: 600 0.95rem/1 var(--body); color: var(--muted); background: none; border: 1px solid var(--line); border-radius: 999px; padding: 9px 14px; cursor: pointer; }
+.pause:hover { color: var(--text); border-color: var(--steel); }
+
+/* Gauge gallery */
+.gauges { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(190px, calc(50% - 7px)), 1fr)); gap: 14px; }
+.gauges figure { margin: 0; display: grid; gap: 8px; }
+.gauges img { width: 100%; height: auto; aspect-ratio: 1; border-radius: 12px; border: 1px solid var(--line); background: var(--ink-3); }
+.gauges figcaption { font: 600 1.05rem/1.1 var(--display); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+
+/* DJI walk-through */
+.walk { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 28px; counter-reset: walk; }
+.walk li { display: grid; gap: 10px; align-content: start; counter-increment: walk; }
+.walk li::before { content: counter(walk, decimal-leading-zero); font-family: var(--mono); color: var(--sky); font-size: 0.9rem; letter-spacing: 0.1em; }
+.walk p { color: var(--muted); }
+.note { margin-top: 28px; padding: 14px 18px; border-left: 3px solid var(--sky); background: var(--ink-2); color: var(--muted); border-radius: 0 10px 10px 0; max-width: 72ch; }
+
+/* Sign-up form */
+.mail .field { display: grid; gap: 6px; border: 0; margin: 0; padding: 0; min-width: 0; }
+.mail label, .mail legend { font-weight: 600; color: var(--text); padding: 0; }
+.mail input[type="email"] { font: inherit; color: var(--text); background: var(--ink-3); border: 1px solid var(--steel); border-radius: 10px; padding: 11px 14px; width: 100%; min-height: 48px; }
+.mail input[type="email"][aria-invalid="true"] { border-color: #ff8a80; }
+.mail .choices { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+.mail .choices label { font-weight: 400; display: inline-flex; gap: 8px; align-items: center; min-height: 32px; cursor: pointer; }
+.mail .choices input { accent-color: var(--sky); width: 18px; height: 18px; margin: 0; }
+.mail .error { color: #ff8a80; font-size: 0.93rem; }
+.mail .status { font-size: 0.97rem; min-height: 1.6em; }
+.mail .status.ok { color: #7ee2a8; }
+.mail .status.bad { color: #ff8a80; }
+.mail .small { color: var(--muted); font-size: 0.88rem; }
+.mail button[disabled] { opacity: 0.6; cursor: progress; }
+.mail.done .field, .mail.done #su-send { display: none; }
+.hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
+/* Skip link: hidden until focused with the keyboard */
+.skip { position: absolute; left: 12px; top: -60px; z-index: 100; background: var(--sky); color: var(--ink); padding: 10px 16px; border-radius: 8px; font-weight: 600; }
+.skip:focus { top: 12px; color: var(--ink); }
+
+/* App screenshots */
+.shots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 3vw, 32px); align-items: start; }
+.shots figure { margin: 0; display: grid; gap: 12px; }
+.shots img { width: 100%; height: auto; border-radius: 22px; border: 1px solid var(--line); background: var(--ink); }
+.shots figcaption { font: 600 1.15rem/1.15 var(--display); letter-spacing: 0.04em; text-transform: uppercase; color: var(--text); text-align: center; }
+@media (max-width: 640px) { .shots { grid-template-columns: 1fr; max-width: 320px; margin-inline: auto; } }

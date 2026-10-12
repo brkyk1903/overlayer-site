@@ -1,5 +1,6 @@
-// Overlayer website: the live overlay demo, style tabs, pricing toggle and
-// copy button. No libraries, no network requests.
+// Overlayer website: the live overlay demo, style and colourway buttons,
+// pricing toggle and sign-up form. No libraries; the only network request is
+// the sign-up, sent when the visitor presses Notify me.
 //
 // The overlays are ported line for line from the app's renderers
 // (app/src/main/java/com/overlayer/app/render/styles/*Style.kt), in the same
@@ -573,7 +574,7 @@
 
   // ---------- One frame ----------
 
-  var style = frame.dataset.style || "broadcast";
+  var style = frame.dataset.style || "clean";
   var colourway = 0;
 
   function drawFrame(t, dt) {
@@ -596,7 +597,7 @@
 
   // ---------- Loop ----------
 
-  var start = null, last = 0, visible = true, running = false;
+  var start = null, last = 0, visible = true, running = false, paused = false;
   var STILL_T = 9;   // the frame shown when motion is reduced: every intro done
 
   function tick(now) {
@@ -605,11 +606,11 @@
     var dt = last ? Math.min(0.05, (now - last) / 1000) : 0.016;
     last = now;
     drawFrame(t, dt);
-    running = visible;
+    running = visible && !paused;
     if (running) requestAnimationFrame(tick);
   }
   function run() {
-    if (running) return;
+    if (running || paused) return;
     running = true;
     last = 0;
     requestAnimationFrame(tick);
@@ -651,7 +652,7 @@
     var buttons = document.querySelectorAll(selector);
     buttons.forEach(function (b) {
       b.addEventListener("click", function () {
-        buttons.forEach(function (o) { o.setAttribute("aria-selected", o === b ? "true" : "false"); });
+        buttons.forEach(function (o) { o.setAttribute("aria-pressed", o === b ? "true" : "false"); });
         onPick(b.dataset[attr]);
       });
     });
@@ -663,8 +664,7 @@
     COLOURWAYS[style].forEach(function (cw, i) {
       var b = document.createElement("button");
       b.type = "button";
-      b.setAttribute("role", "radio");
-      b.setAttribute("aria-checked", i === colourway ? "true" : "false");
+      b.setAttribute("aria-pressed", i === colourway ? "true" : "false");
       var dot = document.createElement("i");
       dot.style.background = "linear-gradient(135deg, " + col(cw.swatch[0]) + " 50%, " + col(cw.swatch[1]) + " 50%)";
       b.appendChild(dot);
@@ -672,7 +672,8 @@
       b.addEventListener("click", function () {
         colourway = i;
         renderSwatches();
-        if (reduceMotion) still();
+        swatches.children[i].focus();
+        if (reduceMotion || paused) drawFrame(pausedAt(), 0);
       });
       swatches.appendChild(b);
     });
@@ -685,7 +686,28 @@
     colourway = 0;
     renderSwatches();
     restart();
+    if (paused) drawFrame(pausedAt(), 0);
   });
+
+  // Pause: anything that moves for more than 5 seconds must be stoppable.
+  var pause = document.getElementById("pause");
+  var heldAt = STILL_T;
+  function pausedAt() { return reduceMotion ? STILL_T : heldAt; }
+  if (reduceMotion) {
+    pause.hidden = true;
+  } else {
+    pause.addEventListener("click", function () {
+      paused = !paused;
+      pause.setAttribute("aria-pressed", paused ? "true" : "false");
+      pause.textContent = paused ? "Play animation" : "Pause animation";
+      if (paused) {
+        heldAt = start === null ? STILL_T : ((performance.now() - start) / 1000) % LOOP;
+      } else {
+        start = performance.now() - heldAt * 1000;
+        run();
+      }
+    });
+  }
 
   // A link can open a style directly: overlayer…/#race
   var hash = location.hash.slice(1);
@@ -706,26 +728,68 @@
     proPer.textContent = PRICES[b][1];
   });
 
-  // ---------- Copy email ----------
+  // ---------- Sign-up form ----------
 
-  var copy = document.getElementById("copy"), email = document.getElementById("email");
-  if (copy && email) {
-    copy.addEventListener("click", function () {
-      function selectIt() {
-        var r = document.createRange();
-        r.selectNodeContents(email);
-        var s = window.getSelection();
-        s.removeAllRanges();
-        s.addRange(r);
+  // Sends the email to FormSubmit, which forwards it to us. Nothing is sent
+  // until the visitor presses the button. Without JavaScript the form still
+  // posts normally and FormSubmit shows its own thank-you page.
+  var form = document.getElementById("signup");
+  if (form && window.fetch) {
+    var input = document.getElementById("su-email");
+    var error = document.getElementById("su-error");
+    var status = document.getElementById("su-status");
+    var send = document.getElementById("su-send");
+
+    function showError(msg) {
+      error.textContent = msg;
+      error.hidden = !msg;
+      input.setAttribute("aria-invalid", msg ? "true" : "false");
+    }
+    function setStatus(msg, kind) {
+      status.textContent = msg;
+      status.className = "status" + (kind ? " " + kind : "");
+    }
+    input.addEventListener("input", function () { if (!error.hidden && input.validity.valid) showError(""); });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var value = input.value.trim();
+      if (!value) { showError("Enter your email address."); input.focus(); return; }
+      if (!input.validity.valid || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        showError("That doesn't look like an email address. Check it and try again, for example name@example.com.");
+        input.focus();
+        return;
       }
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(email.textContent).then(function () {
-          copy.textContent = "Copied";
-          setTimeout(function () { copy.textContent = "Copy"; }, 1600);
-        }, selectIt);
-      } else {
-        selectIt();
-      }
+      showError("");
+      if (form.elements._honey.value) return;  // a bot filled the hidden field
+
+      send.disabled = true;
+      send.textContent = "Sending…";
+      setStatus("Sending…");
+      var phone = form.querySelector("input[name=phone]:checked");
+      fetch("https://formsubmit.co/ajax/coverski1903@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          email: value,
+          phone: phone ? phone.value : "",
+          _subject: "Overlayer early access",
+          _template: "table",
+          _honey: ""
+        })
+      }).then(function (res) {
+        return res.json().then(function (body) { return res.ok && String(body.success) === "true"; });
+      }).then(function (ok) {
+        if (!ok) throw new Error("rejected");
+        form.classList.add("done");
+        setStatus("Thanks, you're on the list. We'll email " + value + " when Overlayer launches.", "ok");
+        status.setAttribute("tabindex", "-1");
+        status.focus();
+      }).catch(function () {
+        send.disabled = false;
+        send.textContent = "Notify me";
+        setStatus("Sorry, that didn't go through. Try again in a moment, or email us at coverski1903@gmail.com.", "bad");
+      });
     });
   }
 })();

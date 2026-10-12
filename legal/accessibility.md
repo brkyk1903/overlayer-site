@@ -21,6 +21,8 @@ We aim to meet the [Web Content Accessibility Guidelines (WCAG) 2.2](https://www
 - Text and controls are designed to have strong contrast against the dark background.
 - Pages reflow to fit phones and can be zoomed to 200% without losing content.
 - If your device asks for reduced motion, the overlay demo shows a still frame and the site stops smooth scrolling.
+- The animated overlay demo has a pause button, so it never has to keep moving.
+- The sign-up form has visible labels, says clearly what went wrong if an email address isn't valid, and announces when you've signed up.
 
 ## Known limitations
 

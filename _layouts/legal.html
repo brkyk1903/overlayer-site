@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{{ page.title }}</title>
 <meta name="description" content="{{ page.description }}">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#0b1320">
 <meta property="og:title" content="{{ page.title }}">
 <meta property="og:description" content="{{ page.description }}">
@@ -43,7 +45,7 @@
 
 <footer>
   <div class="wrap">
-    <p>© 2026 Berkay Karamanlargil. This site sets no cookies and loads nothing from third parties.</p>
+    <p>© 2026 Overlayer. This site sets no cookies and loads nothing from third parties.</p>
   </div>
 </footer>
 

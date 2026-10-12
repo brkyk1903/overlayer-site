@@ -5,13 +5,13 @@ description: "How Overlayer handles your data. Everything stays on your phone, w
 
 # Privacy policy
 
-Effective 26 September 2026
+Effective 11 October 2026
 
-Overlayer is made by Berkay Karamanlargil ("we"). This policy explains what happens to your information when you use the Overlayer app for Android, visit the Overlayer website or email us.
+Overlayer is made by Berkay Karamanlargil ("we"), who is responsible for any personal data described here. This policy explains what happens to your information when you use the Overlayer app for Android, visit the Overlayer website, sign up there or email us.
 
 ## The short version
 
-Overlayer works entirely on your phone. It has no internet access: it cannot send anything anywhere. The app does not collect, receive, store or sell any of your personal data. There are no accounts, no analytics, no advertising and no tracking. The only personal data we ever receive is your email address, and only if you email us yourself.
+Overlayer works entirely on your phone. It has no internet access: it cannot send anything anywhere. The app does not collect, receive, store or sell any of your personal data. There are no accounts, no analytics, no advertising and no tracking. The only personal data we ever receive is your email address, and only if you sign up on the website or email us yourself.
 
 ## What the app works with, on your phone
 
@@ -56,6 +56,14 @@ If you buy an upgrade, the payment is handled by Google Play. We never receive y
 
 Heart rate and other fitness readings are displayed as they were recorded, for your video only. Overlayer is not a medical device and must not be used for medical decisions.
 
+## Signing up on the website
+
+The website has a form for hearing when Overlayer launches and for joining the Android beta. If you fill it in, we receive your email address and whether you use Android or iPhone. Nothing is sent until you press the button.
+
+The form is delivered to our inbox by FormSubmit (formsubmit.co), a form-forwarding service, which processes it only to pass it on to us. FormSubmit is based outside the EU and UK, so your email address may be handled in the United States. See FormSubmit's own privacy policy for how it handles the data it passes on.
+
+We use your email address only to tell you about Overlayer: its launch, the beta, and major updates. Our basis for this is your consent, which you give by submitting the form. You can withdraw it at any time by replying to any of our emails or writing to the address below, and we will delete your address.
+
 ## If you email us
 
 If you email us, for example to join early access or the Android beta, we receive your email address and what you write. We use it only to reply to you and to tell you about Overlayer. We never sell it or share it with anyone else. Ask us at any time and we delete it; we also delete it once we no longer need it.
@@ -64,7 +72,7 @@ To test the app before release, Google Play needs the email address of your Goog
 
 ## This website
 
-The Overlayer website sets no cookies, uses no analytics and loads nothing from other companies. It is hosted on GitHub Pages. Like any web host, GitHub records technical information such as your IP address to deliver and protect the site, under its own privacy statement.
+The Overlayer website sets no cookies, uses no analytics and loads nothing from other companies. The only thing it ever sends anywhere is the sign-up form above, and only when you submit it. It is hosted on GitHub Pages. Like any web host, GitHub records technical information such as your IP address to deliver and protect the site, under its own privacy statement.
 
 ## Children
 
@@ -72,7 +80,7 @@ Overlayer is not directed at children under 13, or under the minimum age for dig
 
 ## Your rights
 
-Laws such as the EU and UK GDPR and Turkey's KVKK give you rights over personal data an organisation holds about you. The only data we can hold about you is your email address, if you emailed us; ask and we will show it to you or delete it. You control everything the app keeps: delete exported videos from your gallery, and clear the app's data or uninstall it to remove everything else.
+Laws such as the EU and UK GDPR and Turkey's KVKK give you rights over personal data an organisation holds about you. The only data we can hold about you is your email address and phone type, if you signed up or emailed us; ask and we will show it to you, correct it or delete it. If you are in the EU or UK and unhappy with how we handle it, you can also complain to your local data protection authority. You control everything the app keeps: delete exported videos from your gallery, and clear the app's data or uninstall it to remove everything else.
 
 ## Changes to this policy
 
