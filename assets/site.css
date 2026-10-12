@@ -126,7 +126,8 @@ h3 { font-weight: 700; font-size: 1.2rem; text-transform: uppercase; letter-spac
 .card p { color: var(--muted); font-size: 0.92rem; }
 .c-editor { grid-column: span 2; grid-row: span 2; }
 .c-editor img, .c-export img { border-radius: 12px; border: 1px solid var(--line); width: 100%; object-fit: cover; object-position: top; }
-.c-editor img { aspect-ratio: 4 / 3.4; }
+/* Ends just above the shape buttons, so nothing shows half cut. */
+.c-editor img { aspect-ratio: 1080 / 870; }
 .c-gauges, .c-export { grid-column: span 2; }
 /* The sheet itself, cropped to its shapes and quality, shown wide enough to read. */
 .c-export img { aspect-ratio: 1080 / 900; object-position: top; }
