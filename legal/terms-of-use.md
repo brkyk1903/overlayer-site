@@ -5,7 +5,7 @@ description: The terms for using the Overlayer app and website.
 
 # Terms of use
 
-Effective 12 October 2026
+Effective 13 October 2026
 
 These terms apply to the Overlayer app for Android and the Overlayer website, made by Berkay Karamanlargil ("we"). By using the app or the website you agree to them.
 
@@ -31,17 +31,19 @@ Overlayer is not connected with or endorsed by the makers of the cameras, device
 
 ## Purchases and subscriptions
 
-Paid features are sold through Google Play. Prices are shown before you buy.
+Overlayer Pro is sold through Google Play, as a yearly subscription or a one-time ("lifetime") purchase. Prices, in your currency, are shown before you buy, and Google Play's terms apply to the payment.
 
-- Subscriptions renew automatically until you cancel them.
-- Cancel at any time in Google Play → Payments & subscriptions. You keep access until the end of the period you paid for.
-- Refunds are handled by Google Play under its refund policy and your local consumer law.
+- The yearly subscription renews automatically each year until you cancel it.
+- Cancel at any time in Google Play → Payments & subscriptions. You keep Pro until the end of the year you paid for.
+- If the yearly price changes, Google Play tells you before it applies, and you can cancel before then.
+- Buying lifetime doesn't cancel a yearly subscription; cancel that yourself in Google Play.
+- Refunds are handled by Google Play under its refund policy and your local consumer law. A refunded purchase no longer unlocks Pro.
 
-A one-time ("lifetime") purchase unlocks the paid features for as long as the app is available and supported on your device.
+A lifetime purchase unlocks Pro, with no further payments, for as long as the app is available and supported on your device. Purchases belong to the Google account you bought with: install the app on another device signed in to that account, and Pro comes back.
 
 ## Free Pro exports and pass codes
 
-Your first 3 exports are in full Pro quality at no cost; after that, the free version's limits apply. We may also give pass codes that unlock Pro for a set time or permanently. Pass codes are free gifts: they are personal, have no cash value, can't be sold or exchanged for money, and a code that has been shared publicly or sold may stop working in later versions of the app.
+Your first 3 exports are in full Pro quality at no cost; after that, the free version's limits apply. We may also give pass codes that unlock Pro for a set time or permanently. Pass codes are free gifts: they are personal, have no cash value, can't be sold or exchanged for money, and a code that has been shared publicly or sold may stop working in later versions of the app. If we ever have to replace the system that checks codes, for example because codes were being made without our permission, existing codes may stop working too; ask us and we'll send a replacement for a code we gave you.
 
 ## Test versions and early access
 

@@ -5,13 +5,13 @@ description: "How Overlayer handles your data. Everything stays on your phone, w
 
 # Privacy policy
 
-Effective 11 October 2026
+Effective 13 October 2026
 
 Overlayer is made by Berkay Karamanlargil ("we"), who is responsible for any personal data described here. This policy explains what happens to your information when you use the Overlayer app for Android, visit the Overlayer website, sign up there or email us.
 
 ## The short version
 
-Overlayer works entirely on your phone. It has no internet access: it cannot send anything anywhere. The app does not collect, receive, store or sell any of your personal data. There are no accounts, no analytics, no advertising and no tracking. The only personal data we ever receive is your email address, and only if you sign up on the website or email us yourself.
+Overlayer works entirely on your phone. It has no internet access: it cannot send anything anywhere. The app does not collect, receive, store or sell any of your personal data. There are no accounts, no analytics, no advertising and no tracking. The only personal data we ever receive is your email address, if you sign up on the website or email us yourself, and the sales details Google Play reports to developers, if you buy Pro.
 
 ## What the app works with, on your phone
 
@@ -28,7 +28,7 @@ These are read on your phone, used to draw the overlay, and never uploaded. We n
 - Your settings: units, chosen style and colourway, export quality, the text you type for your name or a text gauge, and your maximum heart rate.
 - Presets you save.
 - A list of your last few exported videos, with a small preview picture of each, so you can watch or share them again from the start screen. A video you delete from your gallery drops off the list.
-- Your Pro status: a pass code you redeemed, and how many of your free Pro exports you have used. These are checked on your phone; nothing is sent to us.
+- Your Pro status: whether Google Play says you bought Pro, a pass code you redeemed, and how many of your free Pro exports you have used. These are kept and checked on your phone; nothing is sent to us.
 - The videos you export, which are saved to your phone's gallery in an "Overlayer" album.
 
 They stay on your phone until you delete them or uninstall the app. Uninstalling removes the settings and presets. Exported videos stay in your gallery, like any other video, until you delete them.
@@ -50,7 +50,7 @@ The app never asks for your location, camera, microphone or contacts.
 
 ## Purchases
 
-If you buy an upgrade, the payment is handled by Google Play. We never receive your payment details. Google Play only tells the app whether your purchase is active.
+If you buy Pro, the payment is handled by Google Play, under Google's privacy policy. We never receive your payment details. The app asks the Google Play app on your phone whether your purchase is active, when you open or return to the app and when you tap Restore purchases, and keeps only the answer. Google Play gives developers the details of each sale, such as the order number, product, price and country; we use them only to handle refunds and support, and for accounting and tax, and keep them as long as tax law requires.
 
 ## Health information
 
@@ -80,7 +80,7 @@ Overlayer is not directed at children under 13, or under the minimum age for dig
 
 ## Your rights
 
-Laws such as the EU and UK GDPR and Turkey's KVKK give you rights over personal data an organisation holds about you. The only data we can hold about you is your email address and phone type, if you signed up or emailed us; ask and we will show it to you, correct it or delete it. If you are in the EU or UK and unhappy with how we handle it, you can also complain to your local data protection authority. You control everything the app keeps: delete exported videos from your gallery, and clear the app's data or uninstall it to remove everything else.
+Laws such as the EU and UK GDPR and Turkey's KVKK give you rights over personal data an organisation holds about you. The only data we can hold about you is your email address and phone type, if you signed up or emailed us, and Google Play's record of a purchase, if you bought Pro; ask and we will show it to you, correct it or delete it, except sales records that tax law requires us to keep. If you are in the EU or UK and unhappy with how we handle it, you can also complain to your local data protection authority. You control everything the app keeps: delete exported videos from your gallery, and clear the app's data or uninstall it to remove everything else.
 
 ## Changes to this policy
 
