@@ -9,9 +9,8 @@
 
   // Suggested launch prices. Change them here.
   var PRICES = {
-    year: ["$9", "per year"],
-    month: ["$2.99", "per month"],
-    life: ["$15", "one-time"]
+    year: ["$4.99", "per year"],
+    life: ["$7.99", "one-time"]
   };
   var proPrice = document.getElementById("proPrice"), proPer = document.getElementById("proPer");
   var bills = document.querySelectorAll(".billing button");
